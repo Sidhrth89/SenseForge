@@ -1,0 +1,29 @@
+{
+  "name": "senseforge",
+  "version": "0.1.0",
+  "private": true,
+  "description": "SenseForge AI intelligence infrastructure platform.",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w @senseforge/web --",
+    "dev:web": "npm run dev -w @senseforge/web --",
+    "dev:extension": "npm run dev -w @senseforge/extension --",
+    "build": "npm run build --workspaces --if-present",
+    "build:web": "npm run build -w @senseforge/web",
+    "build:extension": "npm run build -w @senseforge/extension",
+    "lint": "npm run lint --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.25",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.16"
+  },
+  "engines": {
+    "node": ">=20.11"
+  }
+}

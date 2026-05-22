@@ -1,0 +1,32 @@
+{
+  "name": "@senseforge/extension",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "plasmo dev",
+    "build": "plasmo build",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@senseforge/shared": "*",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.1.35",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "plasmo": "^0.90.5",
+    "typescript": "^5.9.3"
+  },
+  "manifest": {
+    "name": "SenseForge",
+    "description": "Universal AI command system for highlighted text and page context.",
+    "permissions": ["activeTab", "storage"],
+    "host_permissions": ["http://localhost/*", "https://*/*"],
+    "action": {
+      "default_title": "SenseForge"
+    }
+  }
+}
